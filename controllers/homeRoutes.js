@@ -15,7 +15,17 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+router.get('/dashboard', async (req, res) => {
+  try {
+   
+    // Shows the homepage.handlebars file
+    res.render('dashboard', { 
+    
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 // router.get('/project/:id', async (req, res) => {
 //   try {
 //     const projectData = await Project.findByPk(req.params.id, {

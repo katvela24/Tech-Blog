@@ -16,20 +16,19 @@ const hbs = exphbs.create({
   extname: '.handlebars'
 })
 
-// const sess = {
-//   secret: 'Super secret secret',
-//   cookie: {},
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize
-//   })
-// };
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  // store: new SequelizeStore({
+  //   db: sequelize
+  // })
+};
 
+app.use(session(sess));
 
-// app.use(session(sess));
-
-// creating the engine, using the settings from ln:14
+// create the engine, using the settings from ln:14
 app.engine("handlebars", hbs.engine)
 app.set("view engine", "handlebars")
 

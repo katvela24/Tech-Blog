@@ -2,17 +2,23 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Create Blog model and datatypes, including the user_id foreign key.
-class Blog extends Model {}
+class Blog extends Model { }
 
 Blog.init(
   {
-    title: {
-        type: DataTypes.STRING,
-        allowNull:false
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    body: {
-        type: DataTypes.STRING,
-        allowNull: false
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
 
     date_created: {
@@ -29,7 +35,7 @@ Blog.init(
       },
     },
   },
-  
+
   {
     sequelize,
     timestamps: false,

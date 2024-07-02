@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-content {
+    background-color: rgb(180, 221, 208);
+    height: 15vh;
+    padding-left: 60px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+body {
+    background-color: rgb(243, 243, 235);
+
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    color:  rgb(156, 156, 147);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#title {
+    background-color: rgb(243, 243, 235);
+    width: fit-content;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 15px 15px 15px gray;
+}
+
+#title a {
+    color: rgb(85, 82, 82);
+    text-decoration: none;
+}
+

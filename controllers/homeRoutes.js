@@ -7,7 +7,7 @@ const router = require('express').Router();
 router.get('/', async (req, res) => {
   try {
    
-    // Shows the homepage.handlebars file
+    // Show the homepage.handlebars file
     res.render('homepage', { 
     
     });
@@ -18,13 +18,35 @@ router.get('/', async (req, res) => {
 router.get('/dashboard', async (req, res) => {
   try {
    
-    // Shows the homepage.handlebars file
+    // Show the homepage.handlebars file
     res.render('dashboard', { 
     
     });
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/signup', async (req, res) => {
+  try {
+   
+    // Show the homepage.handlebars file
+    res.render('signup', { 
+    
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/login', (req, res) => {
+  // If logged in, redirect the request to a different route
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('login');
 });
 // router.get('/project/:id', async (req, res) => {
 //   try {
@@ -68,14 +90,6 @@ router.get('/dashboard', async (req, res) => {
 //   }
 // });
 
-// router.get('/login', (req, res) => {
-//   // If the user is already logged in, redirect the request to another route
-//   if (req.session.logged_in) {
-//     res.redirect('/profile');
-//     return;
-//   }
 
-//   res.render('login');
-// });
 
 module.exports = router;

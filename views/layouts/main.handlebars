@@ -7,6 +7,7 @@
   <title>Visit my Tech Blog!</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/homepage.css">
 </head>
 
 <body>
@@ -18,7 +19,6 @@
         <a href="/dashboard">Dashboard</a> 
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">Profile</a> 
         <button class="no-button" id="logout">Logout</button>
         {{else}}
         <a href="/login">Login</a>

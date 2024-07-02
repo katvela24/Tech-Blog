@@ -1,0 +1,30 @@
+.blog-content {
+    width: 80%;
+    border: 2px solid black;
+
+}
+
+.blog-content h1 {
+    background-color: rgb(180, 221, 208);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-content p{
+    min-height: 50px;
+
+}
+
+.blog-page {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#date {
+    font-size: 15px;
+   
+}

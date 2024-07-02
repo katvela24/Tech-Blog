@@ -1,23 +1,19 @@
-<!-- TODO: insert new comment here -->
+{{!--  --}}
 
 <div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-     
-    </h2>
-    <p>
-      <span for="img" aria-label="money"></span>
-      <!-- Pass needed_ value to the helper function -->
-       needed!
-    </p>
-   
-  </div>
-  <div class="col-md-7">
-    <p>
-
-    </p>
+  <div class="col-md-7 blog-page">
+    {{#each blogs}}
+    <div class="blog-content">
+      <h1>
+        {{title}}
+        <span id="date">
+      {{date_created}}
+        </span>
+      </h1>
+      <p>
+        {{content}}
+      </p>
+    </div>
+    {{/each}}
   </div>
 </div>
-
